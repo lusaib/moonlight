@@ -1,0 +1,63 @@
+.border-box {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  border-left: 10px solid white;
+
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.border-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 10px;
+  background-color: #ffff;
+}
+
+.border-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  height: 10px;
+  background-color: #ffff;
+}
+/* 
+@media screen and (max-width: 768px) {
+  .border-box {
+    row-gap: 20px;
+    width: 100%;
+    height: auto;
+  }
+} */
+
+@media screen and (max-width: 926px) {
+  .border-box {
+    row-gap: 20px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 926px) and (max-width: 1280px) {
+  .border-box {
+    row-gap: 20px;
+    width: 100%;
+    height: 700px;
+  }
+}
+
+.border-box-items {
+  @apply flex flex-row justify-between flex-[1] box-border h-[50%] w-full gap-x-[30px] max-md-m:gap-x-[0px] max-md-m:flex-col max-md-m:gap-y-[20px] ;
+}
+
+.border-box-individual-items {
+  @apply h-[100%] w-[100%] box-border;
+}
